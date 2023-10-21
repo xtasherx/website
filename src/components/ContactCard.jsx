@@ -72,7 +72,12 @@ function ContactCard() {
           </div>
           <textarea placeholder="Enter your message" name="message"></textarea>
           <div>
-            <Button type="submit" value="send " text="Submit" />
+            <Button
+              className="btn--pilled font-alt text-gray-600 font-bold btn--sm m-1 hover-grow"
+              type="submit"
+              value="send "
+              text="Submit"
+            />
           </div>
         </form>
       </div>

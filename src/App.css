@@ -68,7 +68,7 @@ form{
   border-color: #ffffff;
 }
 
-.expCard p {
+.expCardDiv {
   border-radius: 10px;
   box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem white;
 }
@@ -117,10 +117,8 @@ details.accordion{
   border: none !important;
 }
 
-.btn--sm, .btn--xs{
+.btn--sm,.btn--xs{
   border-radius: 50px;
-  border-color: #ffffff;
-  background: #F1F3F5;
   box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem white;
 }
 
@@ -129,7 +127,7 @@ details.accordion{
     padding: 1px;
 }
 
-.btn--sm:focus{
+.current{
   background-color: #CBBFFD !important;
   border-color: #CBBFFD !important;
   box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem white,

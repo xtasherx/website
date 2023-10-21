@@ -7,11 +7,14 @@ import Toggle from "./components/Toggle";
 import "./App.css";
 
 function App() {
-  //when button is pressed display the correct card component
   const [state, setState] = useState(<LandingCard />);
+  const currentClass =
+    "btn--pilled font-alt text-gray-600 font-bold btn--sm m-1 hover-grow current";
+  const offClass =
+    "btn--pilled font-alt text-gray-600 font-bold btn--sm m-1 hover-grow";
 
-  const handleClick = (text) => {
-    setState(text);
+  const handleClick = (card) => {
+    setState(card);
   };
 
   return (
@@ -26,18 +29,27 @@ function App() {
 
         <div className="u-center m-2">
           <Button
+            className={
+              state.type.name === "LandingCard" ? currentClass : offClass
+            }
             text="About Me"
             onClick={() => {
               handleClick(<LandingCard />);
             }}
           />
           <Button
+            className={
+              state.type.name === "ContactCard" ? currentClass : offClass
+            }
             text="Contact"
             onClick={() => {
               handleClick(<ContactCard />);
             }}
           />
           <Button
+            className={
+              state.type.name === "ProjectsCard" ? currentClass : offClass
+            }
             text="Experience"
             onClick={() => {
               handleClick(<ProjectsCard />);
