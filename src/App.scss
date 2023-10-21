@@ -1,6 +1,16 @@
 
+///Box Shadows
+$inset-shadow-light: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem white;
+$inset-shadow-dark: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #AC94FA;
+$outset-shadow-light: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem white;
+///Colors
+$white: #fff;
+$light-background: #F1F3F5;
+$purple-300: #CBBFFD;
+$purple-400: #AC94FA;
+
 body {
-  background-color: #F1F3F5;
+  background-color: $light-background;
   height: 100%;
 }
 
@@ -8,8 +18,8 @@ input, textarea{
   color: #868E96 !important;
   border-radius: 1rem !important;
   border: none !important;
-  background-color: #F1F3F5 !important;
-  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem white;
+  background-color: $light-background !important;
+  box-shadow: $inset-shadow-light;
 }
 
 form{
@@ -22,7 +32,7 @@ form{
 
 
 .header{
-  background-color: #F1F3F5!important ;
+  background-color: $light-background!important ;
   box-shadow: none !important;
 }
 
@@ -39,9 +49,9 @@ form{
   width: 200px;
   min-width: 200px;
   border-radius: 50%;
-  background: #F1F3F5;
-  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #AC94FA,
-   0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem white;
+  background: $light-background;
+  box-shadow:$inset-shadow-dark ,
+   $outset-shadow-light;
   display: inline-block;
   background-image: url("./assets/avatar.png");
   background-size: 105%;
@@ -54,9 +64,9 @@ form{
   min-height: 70vh;
   /* margin: 5rem auto 0; */
   border-radius: 50px;
-  border-color: #ffffff;
-  background: #F1F3F5;
-  box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem white;
+  border-color: $white;
+  background: $light-background;
+  box-shadow: $outset-shadow-light;
 }
 
 .expCard{
@@ -64,13 +74,13 @@ form{
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: #c8d0e7;
-  background: #F1F3F5;
-  border-color: #ffffff;
+  background: $light-background;
+  border-color: $white;
 }
 
 .expCardDiv {
   border-radius: 10px;
-  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem white;
+  box-shadow: $inset-shadow-light;
 }
 
 .expCard::-webkit-scrollbar {
@@ -80,15 +90,15 @@ form{
  
 .expCard::-webkit-scrollbar-track {
   border-radius: 1rem !important;
-  background-color: #F1F3F5 !important;
-  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem white;
+  background-color: $light-background !important;
+  box-shadow: $inset-shadow-light;
 
 }
  
 .expCard::-webkit-scrollbar-thumb {
   border-radius: 1rem !important;
-  background-color:  #CBBFFD;
-  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #AC94FA;
+  background-color:  $purple-300;
+  box-shadow: $inset-shadow-dark;
   
 }
 
@@ -97,11 +107,11 @@ form{
   min-width: 100%;
   padding: 1rem;
   margin-bottom: 0rem !important;
-  border-color: #F1F3F5;
+  border-color: $light-background;
   border-width: 1px;
   border-radius: 1rem 1rem 0px 0px ;
-  background: #F1F3F5;
-  box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem white;
+  background: $light-background;
+  box-shadow: $outset-shadow-light;
 }
 
 .accordion div{
@@ -109,8 +119,8 @@ form{
   padding: 1rem;
   border-radius: 0rem 0rem 1rem 1rem !important;
   border: none !important;
-  background-color: #F1F3F5 !important;
-  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem white;
+  background-color: $light-background !important;
+  box-shadow: $inset-shadow-light;
 }
 
 details.accordion{
@@ -119,7 +129,7 @@ details.accordion{
 
 .btn--sm,.btn--xs{
   border-radius: 50px;
-  box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem white;
+  box-shadow: $outset-shadow-light;
 }
 
 .lightModeIcon{
@@ -128,14 +138,14 @@ details.accordion{
 }
 
 .current{
-  background-color: #CBBFFD !important;
-  border-color: #CBBFFD !important;
-  box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem white,
-  inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #AC94FA !important;
+  background-color: $purple-300 !important;
+  border-color: $purple-300 !important;
+  box-shadow: $outset-shadow-light,
+  $inset-shadow-dark !important;
 }
 
 .input-focused, input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus, input[type=text].input-focused, select:focus, textarea:focus, textarea[type=text]:focus {
-  border-color: #AC94FA !important;
+  border-color: $purple-400 !important;
   box-shadow: 0 0 0 0.2rem rgba(125, 93, 250, 0.45), inset 0 1px 8px rgba(0,0,0,.07) !important;
 }
 

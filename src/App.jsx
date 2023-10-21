@@ -4,7 +4,7 @@ import LandingCard from "./components/LandingCard";
 import ContactCard from "./components/ContactCard";
 import ProjectsCard from "./components/ProjectsCard";
 import Toggle from "./components/Toggle";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const [state, setState] = useState(<LandingCard />);
