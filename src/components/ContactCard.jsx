@@ -8,10 +8,10 @@ function ContactCard() {
     console.log("clicked");
     emailjs
       .sendForm(
-        "contact_service",
-        "template_vqmdehr",
+        import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
         e.target,
-        "user_N1lY8Mc7IHZz5e2Jv6ZE1"
+        import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -22,19 +22,6 @@ function ContactCard() {
         }
       );
   }
-
-  // return (
-  //   <form className="contact-form" onSubmit={sendEmail}>
-  //     <input type="hidden" name="contact_number" />
-  //     <label>Name</label>
-  //     <input type="text" name="user_name" />
-  //     <label>Email</label>
-  //     <input type="email" name="user_email" />
-  //     <label>Message</label>
-  //     <textarea name="message" />
-  //     <input type="submit" value="Send" />
-  //   </form>
-  // );
 
   //////
 
@@ -56,7 +43,21 @@ function ContactCard() {
           <span>! </span>
           Let's chat.
         </h4>
+
         <form className="contact-form" onSubmit={sendEmail}>
+          <div className="input-control u-round-lg">
+            <input type="hidden" name="contact_number" />
+          </div>
+
+          <input type="text" name="user_name" />
+
+          <input type="email" name="user_email" />
+
+          <textarea name="message" />
+          <input type="submit" value="Send" />
+        </form>
+
+        {/* <form className="contact-form" onSubmit={sendEmail}>
           <div className="input-control">
             <input
               type="text"
@@ -79,7 +80,7 @@ function ContactCard() {
               text="Submit"
             />
           </div>
-        </form>
+        </form> */}
       </div>
     </>
   );
