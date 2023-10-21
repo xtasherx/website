@@ -1,7 +1,7 @@
 function ProjectsCard() {
   return (
     <>
-      <div className="expCard p-2">
+      <div className="expCard  p-2">
         <div>
           <h3 className="font-extrathin text-gray-600">
             Blue Acorn ici{" "}

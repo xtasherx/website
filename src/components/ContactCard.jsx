@@ -58,7 +58,7 @@ function ContactCard() {
           {formValues.sent ? ". Have a great day!" : "! Let's chat."}
         </h4>
 
-        <form className="contact-form" onSubmit={sendEmail}>
+        <form className="contact-form w-100p" onSubmit={sendEmail}>
           <div className="input-control u-round-lg">
             <input
               onChange={change}
