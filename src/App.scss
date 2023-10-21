@@ -1,4 +1,4 @@
-
+////Variables
 ///Box Shadows
 $inset-shadow-light: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem white;
 $inset-shadow-dark: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #AC94FA;
@@ -8,28 +8,28 @@ $white: #fff;
 $light-background: #F1F3F5;
 $purple-300: #CBBFFD;
 $purple-400: #AC94FA;
+////////////////////////////////
 
+///tag selectors
 body {
   background-color: $light-background;
   height: 100%;
 }
 
 input, textarea{
-  color: #868E96 !important;
+  color: #868E96 ;
   border-radius: 1rem !important;
   border: none !important;
   background-color: $light-background !important;
   box-shadow: $inset-shadow-light;
 }
 
-form{
-  width: 100%;
-}
-
+//id selectors
 #root{
   height: 100vh;
 }
 
+///full site class selectors 
 
 .header{
   background-color: $light-background!important ;
@@ -38,16 +38,34 @@ form{
 
 .lightModeIcon{
   filter: invert(74%) sepia(14%) saturate(919%) hue-rotate(208deg) brightness(101%) contrast(106%);
+  max-width: 1.125rem;
+  padding: 0.0625rem;
 }
 
-.input-control{
-  min-width: 100%;
+.cardContainer{
+  min-height: 70vh;
+  border-radius: 3.125rem;
+  border-color: $white;
+  background: $light-background;
+  box-shadow: $outset-shadow-light;
 }
 
+.btn--sm,.btn--xs{
+  box-shadow: $outset-shadow-light;
+}
+
+.current{
+  background-color: $purple-300 !important;
+  border-color: $purple-300 !important;
+  box-shadow: $outset-shadow-light,
+  $inset-shadow-dark !important;
+}
+
+///landing page class selectors
 .avi{
-  height: 200px;
-  width: 200px;
-  min-width: 200px;
+  height: 12.5rem;
+  width: 12.5rem;
+  min-width: 12.5rem;
   border-radius: 50%;
   background: $light-background;
   box-shadow:$inset-shadow-dark ,
@@ -58,17 +76,7 @@ form{
   background-repeat: no-repeat;
   background-position: center;
 }
-
-.cardContainer{
-
-  min-height: 70vh;
-  /* margin: 5rem auto 0; */
-  border-radius: 50px;
-  border-color: $white;
-  background: $light-background;
-  box-shadow: $outset-shadow-light;
-}
-
+///projects page class selectors
 .expCard{
   max-height: 50vh;
   overflow-y: scroll;
@@ -79,75 +87,27 @@ form{
 }
 
 .expCardDiv {
-  border-radius: 10px;
+  border-radius: 0.625rem;
   box-shadow: $inset-shadow-light;
 }
 
 .expCard::-webkit-scrollbar {
   width: .65rem;
-
 }
  
 .expCard::-webkit-scrollbar-track {
   border-radius: 1rem !important;
   background-color: $light-background !important;
   box-shadow: $inset-shadow-light;
-
 }
  
 .expCard::-webkit-scrollbar-thumb {
   border-radius: 1rem !important;
   background-color:  $purple-300;
-  box-shadow: $inset-shadow-dark;
-  
+  box-shadow: $inset-shadow-dark;  
 }
 
 
-.accordion__summary{
-  min-width: 100%;
-  padding: 1rem;
-  margin-bottom: 0rem !important;
-  border-color: $light-background;
-  border-width: 1px;
-  border-radius: 1rem 1rem 0px 0px ;
-  background: $light-background;
-  box-shadow: $outset-shadow-light;
-}
-
-.accordion div{
-  color: #868E96 !important;
-  padding: 1rem;
-  border-radius: 0rem 0rem 1rem 1rem !important;
-  border: none !important;
-  background-color: $light-background !important;
-  box-shadow: $inset-shadow-light;
-}
-
-details.accordion{
-  border: none !important;
-}
-
-.btn--sm,.btn--xs{
-  border-radius: 50px;
-  box-shadow: $outset-shadow-light;
-}
-
-.lightModeIcon{
-    max-width: 18px;
-    padding: 1px;
-}
-
-.current{
-  background-color: $purple-300 !important;
-  border-color: $purple-300 !important;
-  box-shadow: $outset-shadow-light,
-  $inset-shadow-dark !important;
-}
-
-.input-focused, input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus, input[type=text].input-focused, select:focus, textarea:focus, textarea[type=text]:focus {
-  border-color: $purple-400 !important;
-  box-shadow: 0 0 0 0.2rem rgba(125, 93, 250, 0.45), inset 0 1px 8px rgba(0,0,0,.07) !important;
-}
 
 
 

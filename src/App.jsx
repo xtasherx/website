@@ -4,6 +4,7 @@ import LandingCard from "./components/LandingCard";
 import ContactCard from "./components/ContactCard";
 import ProjectsCard from "./components/ProjectsCard";
 import Toggle from "./components/Toggle";
+import "cirrus-ui";
 import "./App.scss";
 
 function App() {

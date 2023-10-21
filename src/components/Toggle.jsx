@@ -12,7 +12,7 @@ function Toggle() {
   return (
     <>
       <button
-        className="btn--xs u-flex m-1 u-items-center"
+        className="btn--xs btn--pilled u-flex m-1 u-items-center"
         onClick={handleClick}
       >
         {lightMode ? (
