@@ -3,11 +3,14 @@
 $inset-shadow-light: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem white;
 $inset-shadow-dark: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #AC94FA;
 $outset-shadow-light: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem white;
+$outset-shadow-dark:   6px 6px 10px #191c20,-6px -6px 10px #1d2022;
+$inset-shadow-darkMode: inset 0.2rem 0.2rem 0.5rem #191c20, inset -0.2rem -0.2rem 0.5rem #1d2022;
 ///Colors
 $white: #fff;
 $light-background: #F1F3F5;
 $purple-300: #CBBFFD;
 $purple-400: #AC94FA;
+$dark-background: #212529;
 ////////////////////////////////
 
 ///tag selectors
@@ -51,6 +54,8 @@ input, textarea{
 }
 
 .btn--sm,.btn--xs{
+  background-color: $light-background !important;
+  border-color: $light-background !important;
   box-shadow: $outset-shadow-light;
 }
 
